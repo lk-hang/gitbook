@@ -1,8 +1,8 @@
 # Summary
 
 
-* [Introduction](../chapter-1/README.md)
-  * [Writing is nice](../chapter-1/motivations.md)
+* [I](../chapter-1/README.md)
+  * [Motivation](../chapter-1/motivation.md)
   * [GitBook is nice](../chapter-1/gitbook.md)
 * [Part II](chapter-2/README.md)
   * [We love feedback](../chapter-2/feedback_please.md)

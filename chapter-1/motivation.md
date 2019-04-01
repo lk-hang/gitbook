@@ -1,6 +1,6 @@
 # Introduction
 
-## Introduction 
+## Problem Formulation 
 
 In recent years, more funds (ETFs, Mutual Funds) have been pursuing a portfolio strategy that tracks (mimics) a predetermined benchmark. Examples include:
 
