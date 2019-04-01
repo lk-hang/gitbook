@@ -7,6 +7,8 @@ Term
 
 term
 
+I am writing about term, terms, and Terms, and Another term for term is Another term.
+
 Another term
 
 This is ## Another term

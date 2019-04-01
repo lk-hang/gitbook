@@ -8,3 +8,4 @@ and all other kinds of inline markup ...
 ## term 
 
 Definition for term is given here. Term is defined as a word, or period, or whatever. 
+
