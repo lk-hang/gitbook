@@ -1,2 +1,2 @@
-# gitbook
-Files for www.lkhang.com
+# Notes
+I store my research notes here.
