@@ -24,3 +24,8 @@ $$
 $$
 
 The solution of this problem can be found [here].
+
+$$ \Lambda(a, \lambda_0, \lambda) = a' \mu - \frac{1}{2}\gamma a' \Sigma a$$
+
+
+
