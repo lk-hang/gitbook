@@ -27,25 +27,46 @@ The solution of this problem can be found [here].
 
 ## Factor Construction
 
-Suppose that all portfolio managers have homogeneous views on the stocks. Our hypothesis is that If all funds perform some sort of factor investing, such as CAPM, FF3, FF4, or FF5, then most of these funds get similar views on return expectations and return covariances. Suppose these managers agree on CAPM, that is:
+One may wonder what $\mu, \Sigma$ in the portfolio optimization problem might be. Suppose that all portfolio managers have homogeneous views on the stocks. Our hypothesis is that If all funds perform some sort of factor investing, such as CAPM, FF3, FF4, or FF5, then most of these funds get similar views on return expectations and return covariances. Suppose these managers agree on CAPM, that is:
 
-$$ \mu_i = E[R_i] = \beta_i E[R_m] ​$$
+$$ \mu_i = E[R_i] = \beta_i E[R_m] $$
 
-and $\Sigma$ is constructed as a diagonal matrix with variance defined by:
+and $$\Sigma$$ is constructed as a diagonal matrix with variance defined by:
 
-$$V(R_i) = \beta_i V(R_m) \beta_i + \sigma^2_{\varepsilon,i}​$$
+$$V(R_i) = \beta_i V(R_m) \beta_i + \sigma^2_{\varepsilon,i}$$
 
 On the other hand, if agents agree on a multivariate factor model, such as 3-Factor Fama French model, $$\mu$$ and $$\Sigma$$ are constructed as:
 
-$$\mu = E[R_i] = \beta_1 E[F_1] + \beta_2 E[F_2] + \beta_3 E[F_3]$$
+$$\mu = E[R_i] = \beta_1 E[F_1] + \beta_2 E[F_2] + \beta_3 E[F_3]​$$
 
 and 
 
 $$\Sigma = B \Sigma_F B' + diag(\sigma^2_{\varepsilon, 1}, ..., \sigma^2_{\varepsilon, N}) $$
 
-where $$B$$ is a $$N \times k$$ factor loading matrix, and $\Sigma_F$ is the $$k \times k$$  covariance matrix of the factors.
+where $$B$$ is a $$N \times k$$ factor loading matrix, and $$\Sigma_F$$ is the $$k \times k$$  covariance matrix of the factors.
 
 ## Solution
 
 The mathematical problem can be solved intuitively:
+$$
+\Lambda(a, \lambda_0, \lambda) = a'\mu - \frac{1}{2} \gamma a' \Sigma a + \lambda_0 a'\mathbb{1} + \lambda' (a + b)
+$$
+
+
+The FOC is:
+$$
+\mu - \gamma\Sigma a + \lambda_0 + \lambda = 0
+$$
+
+$$
+a = \frac{1}{\gamma} \Sigma^{-1}(\mu + \lambda_0 + \lambda)
+$$
+
+Since 
+$$
+0 = 1'a  = \frac{1}{\gamma} 1' \Sigma^{-1} (\mu + \lambda_0 + \lambda)
+$$
+Does this imply:
+
+$$\lambda = -\mu$$ ?
 
