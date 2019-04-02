@@ -27,7 +27,7 @@ The solution of this problem can be found [here].
 
 ## Factor Construction
 
-One may wonder what $\mu, \Sigma$ in the portfolio optimization problem might be. Suppose that all portfolio managers have homogeneous views on the stocks. Our hypothesis is that If all funds perform some sort of factor investing, such as CAPM, FF3, FF4, or FF5, then most of these funds get similar views on return expectations and return covariances. Suppose these managers agree on CAPM, that is:
+One may wonder what$$\mu, \Sigma$$ in the portfolio optimization problem might be. Suppose that all portfolio managers have homogeneous views on the stocks. Our hypothesis is that If all funds perform some sort of factor investing, such as CAPM, FF3, FF4, or FF5, then most of these funds get similar views on return expectations and return covariances. Suppose these managers agree on CAPM, that is:
 
 $$ \mu_i = E[R_i] = \beta_i E[R_m] $$
 
@@ -52,14 +52,14 @@ $$
 \Lambda(a, \lambda_0, \lambda) = a'\mu - \frac{1}{2} \gamma a' \Sigma a + \lambda_0 a'\mathbb{1} + \lambda' (a + b)
 $$
 
-where $$ \lambda $$ is a $N \times 1$ vector containing Lagrangian variables. The FOC is:
+where $$ \lambda $$ is a $$N \times 1$$ vector containing Lagrangian variables. The FOC is:
 $$
 \mu - \gamma\Sigma a + \lambda_0 + \lambda = 0
 $$
 
 
 
-with the KKT conditions that $$ \lambda '(a + b)$$ = 0, and $\lambda \geq 0$ .
+with the KKT conditions that $$ \lambda '(a + b)$$ = 0, and $$\lambda \geq 0$	$ .
 
 
 $$
