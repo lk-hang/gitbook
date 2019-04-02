@@ -47,26 +47,23 @@ where $$B$$ is a $$N \times k$$ factor loading matrix, and $$\Sigma_F$$ is the $
 
 ## Solution
 
-The mathematical problem can be solved intuitively:
+The mathematical problem can be solved intuitively by maximizing the Lagrangian function:
 $$
 \Lambda(a, \lambda_0, \lambda) = a'\mu - \frac{1}{2} \gamma a' \Sigma a + \lambda_0 a'\mathbb{1} + \lambda' (a + b)
 $$
 
-
-The FOC is:
+where $$ \lambda $$ is a $N \times 1$ vector containing Lagrangian variables. The FOC is:
 $$
 \mu - \gamma\Sigma a + \lambda_0 + \lambda = 0
 $$
 
-$$
-a = \frac{1}{\gamma} \Sigma^{-1}(\mu + \lambda_0 + \lambda)
-$$
 
-Since 
-$$
-0 = 1'a  = \frac{1}{\gamma} 1' \Sigma^{-1} (\mu + \lambda_0 + \lambda)
-$$
-Does this imply:
 
-$$\lambda = -\mu$$ ?
+with the KKT conditions that $$ \lambda '(a + b)$$ = 0, and $\lambda \geq 0$ .
+
+
+$$
+\lambda = \gamma \Sigma a - \mu - \lambda_0
+$$
+This condition says that stocks with high shadow costs have lower expected return, or high marginal contribution to risk. 
 
