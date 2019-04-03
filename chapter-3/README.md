@@ -1,4 +1,4 @@
-# Paper Summries
+# Paper Summaries
 
-Here I summarize papers relevant to my own research topic
+Here I summarize papers relevant to my own research topic.
 

@@ -21,7 +21,23 @@ a'1  = 0 \\
  -b \leq a
 $$
 
-The solution of this problem can be found [here].
+## Solution
+
+The problem can be solved intuitively by maximizing the Lagrangian function:
+$$
+\Lambda(a, \lambda_0, \lambda) = a'\mu - \frac{1}{2} \gamma a' \Sigma a + \lambda_0 a'\mathbb{1} + \lambda' (a + b)
+$$
+where $$ \lambda $$ is a $$N \times 1$$ vector containing Lagrangian variables. The FOC is:
+$$
+\mu - \gamma\Sigma a + \lambda_0 + \lambda = 0
+$$
+
+
+with the KKT conditions that $$ \lambda '(a + b)$$ = 0, and $$\lambda \geq 0$	$ .
+$$
+\lambda = \gamma \Sigma a - \mu - \lambda_0
+$$
+This condition says that stocks with high shadow costs have lower expected return, or high marginal contribution to risk. 
 
 
 
@@ -45,25 +61,5 @@ $$\Sigma = B \Sigma_F B' + diag(\sigma^2_{\varepsilon, 1}, ..., \sigma^2_{\varep
 
 where $$B$$ is a $$N \times k$$ factor loading matrix, and $$\Sigma_F$$ is the $$k \times k$$  covariance matrix of the factors.
 
-## Solution
 
-The mathematical problem can be solved intuitively by maximizing the Lagrangian function:
-$$
-\Lambda(a, \lambda_0, \lambda) = a'\mu - \frac{1}{2} \gamma a' \Sigma a + \lambda_0 a'\mathbb{1} + \lambda' (a + b)
-$$
-
-where $$ \lambda $$ is a $$N \times 1$$ vector containing Lagrangian variables. The FOC is:
-$$
-\mu - \gamma\Sigma a + \lambda_0 + \lambda = 0
-$$
-
-
-
-with the KKT conditions that $$ \lambda '(a + b)$$ = 0, and $$\lambda \geq 0$	$ .
-
-
-$$
-\lambda = \gamma \Sigma a - \mu - \lambda_0
-$$
-This condition says that stocks with high shadow costs have lower expected return, or high marginal contribution to risk. 
 

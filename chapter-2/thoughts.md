@@ -1,5 +1,3 @@
 # Thoughts
 
-
-
-### Ideas
+Extensions, further ideas added here.
