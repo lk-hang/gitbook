@@ -6,9 +6,74 @@
 
 My first set of results is assuming that stock returns follow a CAPM structure. The risk aversion parameter $$ \gamma $$ is set to 1.We obtain stock-month pair of shadow costs ($$ N = 2,875,729 $$). 
 
-### Unequal Bin
+### Unequal Bins
+
+In this exercise, I choose stocks with $$ \lambda = 0 $$ as low $$ \lambda $$ stocks (rank = 1). For the stocks with $$ \lambda > 0 $$, I sort them into 4 equal bins. Stocks with the highest $$ \lambda $$ are high $$\lambda$$ stocks (rank = 5). 
+
+#### Pre-Formation
+
+| #stocks | ranks | lm    | mean   | std   |
+| ------- | ----- | ----- | ------ | ----- |
+| 533     | 0     | 0.000 | 5.510  | 9.311 |
+| 1096    | 1     | 0.118 | 2.561  | 4.627 |
+| 1096    | 2     | 0.235 | 1.012  | 3.823 |
+| 1096    | 3     | 0.324 | -0.295 | 4.006 |
+| 1096    | 4     | 0.505 | -2.236 | 5.603 |
+
+| CAPM-PRE |        |       |       |       |
+| -------- | ------ | ----- | ----- | ----- |
+| ranks    | alpha  | MKT   | rmse  | rsq   |
+| 0        | 4.413  | 1.277 | 7.304 | 0.381 |
+| 1        | 1.665  | 0.918 | 2.118 | 0.791 |
+| 2        | 0.187  | 0.791 | 1.461 | 0.855 |
+| 3        | -1.117 | 0.785 | 1.951 | 0.765 |
+| 4        | -3.139 | 0.929 | 3.761 | 0.552 |
+
+| FF3-PRE |        |       |        |        |       |       |
+| ------- | ------ | ----- | ------ | ------ | ----- | ----- |
+| ranks   | alpha  | MKT   | SMB    | HLML   | rmse  | rsq   |
+| 0       | 4.414  | 1.215 | 0.316  | -0.019 | 7.243 | 0.391 |
+| 1       | 1.582  | 0.952 | -0.007 | 0.185  | 2.054 | 0.804 |
+| 2       | 0.080  | 0.826 | 0.035  | 0.238  | 1.307 | 0.884 |
+| 3       | -1.219 | 0.801 | 0.123  | 0.223  | 1.831 | 0.793 |
+| 4       | -3.181 | 0.852 | 0.479  | 0.070  | 3.491 | 0.614 |
+
+#### Post-Formation
+
+| #stocks   | ranks  | lm    | mean   | std    |       |       |      |
+| --------- | ------ | ----- | ------ | ------ | ----- | ----- | ---- |
+| 533       | 0      | 0.000 | 0.579  | 5.789  |       |       |      |
+| 1096      | 1      | 0.118 | 0.859  | 4.299  |       |       |      |
+| 1096      | 2      | 0.235 | 0.994  | 4.113  |       |       |      |
+| 1096      | 3      | 0.324 | 0.991  | 4.514  |       |       |      |
+| 1096      | 4      | 0.505 | 0.948  | 6.098  |       |       |      |
 
 
+| CAPM-POST |        |       |        |        |       |       |      |
+| ranks     | alpha  | MKT   | rmse   | rsq    |       |       |      |
+| --------- | ------ | ----- | ------ | ------ | ----- | ----- | ---- |
+| 0         | -0.348 | 1.009 | 3.634  | 0.608  |       |       |      |
+| 1         | -0.007 | 0.894 | 1.577  | 0.866  |       |       |      |
+| 2         | 0.142  | 0.869 | 1.354  | 0.892  |       |       |      |
+| 3         | 0.104  | 0.935 | 1.690  | 0.860  |       |       |      |
+| 4         | -0.064 | 1.166 | 3.152  | 0.733  |       |       |      |
+
+| FF3-POST  |        |       |        |        |       |       |      |
+| --------- | ------ | ----- | ------ | ------ | ----- | ----- | ---- |
+| ranks     | alpha  | MKT   | SMB    | HML    | rmse  | rsq   |      |
+| 0         | -0.341 | 0.963 | 0.214  | -0.033 | 3.576 | 0.620 |      |
+| 1         | -0.053 | 0.918 | -0.024 | 0.109  | 1.544 | 0.872 |      |
+| 2         | 0.067  | 0.910 | -0.055 | 0.176  | 1.246 | 0.909 |      |
+| 3         | 0.054  | 0.937 | 0.091  | 0.108  | 1.648 | 0.867 |      |
+| 4         | -0.030 | 1.060 | 0.457  | -0.111 | 2.813 | 0.788 |      |
+
+### Equal Bins
+
+
+
+#### Pre-Formation
+
+#### Post-Formation
 
 
 
@@ -18,7 +83,15 @@ My first set of results is assuming that stock returns follow a CAPM structure. 
 
 ## Fama-French Results
 
-### 
+### Unequal Bins
 
+#### Pre-Formation
 
+#### Post-Formation
+
+### Equal Bins
+
+#### Pre-Formation
+
+#### Post-Formation
 
