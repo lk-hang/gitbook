@@ -7,7 +7,7 @@ My sample data is the daily data from the whole universe of CRSP, ranging from 1
 
 ## Implementation Details
 
-I obtain $$\lambda_i$$ for each stock in each month by solving the portfolio optimization. Note that $$\lambda_i$$ is either $0$ or larger than $0$, by the KKT condition. I repeat the exercise for both CAPM and Fama French. The portfolio optimization is a quadratic programming problem and can be solved with a Goldfarb/Idnani dual algorithm `quadprog`. 
+I obtain $$\lambda_i$$ for each stock in each month by solving the portfolio optimization [This link](../chapter-1/motivation#problem-formulation). Note that $$\lambda_i$$ is either $0$ or larger than $0$, by the KKT condition. I repeat the exercise for both CAPM and Fama French. The portfolio optimization is a quadratic programming problem and can be solved with a Goldfarb/Idnani dual algorithm `quadprog`. 
 
 To solve the quadratic programming problem, I require specification of $$\mu, \Sigma, b$$. I use the following procedure.
 
@@ -21,7 +21,7 @@ To obtain the expected return $\mu$, we simply use: $$ \hat{\beta}_i' F$$.
 
 ### Return Covariance
 
-To obtain the return covariance matrix $$\Sigma = B\Sigma_F B' + diag(\sigma_{\varepsilon, 1}^2,..., \sigma_{\varepsilon_{1,N}^2})$$, I calculate covariance matrix of the daily factors of that month, returning, $$\Sigma_{F, t}$$. $$B$$ is the $N \times k$ factor loading matrix, estimated in the linear regression above for each month, and $$\sigma_{\varepsilon_i}^2$$ is estimated with its corresponding mean-squared error.
+To obtain the return covariance matrix $$\Sigma = B\Sigma_F B' + diag(\sigma_{\varepsilon, 1}^2,..., \sigma_{\varepsilon_{1,N}^2})$$, I calculate covariance matrix of the daily factors of that month, returning, $$\Sigma_{F, t}$$. $$B$$ is the $N \times k$ factor loading matrix, estimated in the linear regression above for each month, and $$\sigma_{\varepsilon_i}^2​$$ is estimated with its corresponding mean-squared error.
 
 ### Benchmark Weights
 
@@ -32,5 +32,7 @@ Subsequent exercises would involve more realistic benchmarks, such as the S&P 50
 - [ ] Paulo mentioned that I can use `/wrds/crsp/sasdata/a_indexes/DSP500LIST` to access S&P 500 listings, which can be merged with CRSP
 - [ ] Paulo mentioned that Thompson-Reuter Mutual Funds data can be found from `/wrds/tfn/sasdata/s12/s12`
 
-Finally, we have a free parameter risk aversion $$ \gamma $$. which captures the trade-off between expected return and tracking error. We will set $$ \gamma $$ between 0.25 to 1.
+### Risk Aversion
+
+We have a free parameter risk aversion $$ \gamma $$. which captures the trade-off between expected return and tracking error. We will set $$ \gamma $$ between 0.25 to 1. Setting $$ \gamma $$ to 5 (or a large number is not good, **WHY?**)
 
