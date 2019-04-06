@@ -7,9 +7,9 @@ My sample data is the daily data from the whole universe of CRSP, ranging from 1
 
 ## Implementation Details
 
-I obtain $$\lambda_i$$ for each stock in each month by solving the portfolio optimization [This link](../chapter-1/motivation#problem-formulation). Note that $$\lambda_i$$ is either $0$ or larger than $0$, by the KKT condition. I repeat the exercise for both CAPM and Fama French. The portfolio optimization is a quadratic programming problem and can be solved with a Goldfarb/Idnani dual algorithm `quadprog`. 
+I obtain $$\lambda_i$$ for each stock in each month by solving the portfolio optimization [see](<https://www.lkhang.com/chapter-1/motivation#problem-formulation>). Note that $$\lambda_i$$ is either $0$ or larger than $0$, by the KKT condition. I repeat the exercise for both CAPM and Fama French. The portfolio optimization is a quadratic programming problem and can be solved with a Goldfarb/Idnani dual algorithm `quadprog`. 
 
-To solve the quadratic programming problem, I require specification of $$\mu, \Sigma, b$$. I use the following procedure.
+To solve the quadratic programming problem, I require specification of $$\mu, \Sigma, b​$$. I use the following procedure.
 
 ### Expected Return
 
@@ -35,4 +35,10 @@ Subsequent exercises would involve more realistic benchmarks, such as the S&P 50
 ### Risk Aversion
 
 We have a free parameter risk aversion $$ \gamma $$. which captures the trade-off between expected return and tracking error. We will set $$ \gamma $$ between 0.25 to 1. Setting $$ \gamma $$ to 5 (or a large number is not good, **WHY?**)
+
+## Portfolio Construction
+
+Once we obtained the cost of shorting, we create portfolios that are long high cost of shorting (large $$ \lambda $$) and portfolios that are short low cost of shorting ($$ \lambda$$ close or equal to 0). For each month, we sort stocks according to $\lambda$ and assign them to a bin according to its rank relative to other stocks. I will default to a quintile portfolios, that is, I choose 5 bins for my exercise (rank 5 equals large $$ \lambda $$, and rank 1 equals small $$\lambda$$ ). To create the portfolios, we first buy-and-hold each stock to calculate the monthly return of each stock. Within each quintile portfolio, we then value-weight each stock in that portfolio using the market cap of that stock from the previous month. This results in 5 portfolios sorted by $$ \lambda $$.
+
+
 
