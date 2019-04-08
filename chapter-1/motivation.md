@@ -16,9 +16,6 @@ One constraint that all these funds share is the inability to short assets. A po
 
 Mathematically, the funds are solving the following mathematical problem:
 
-
-
-
 $$
 \max_a \quad a'\mu - \frac{1}{2} \gamma a'\Sigma a \\
 a'1  = 0 \\

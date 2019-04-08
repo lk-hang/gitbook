@@ -34,7 +34,27 @@ Subsequent exercises would involve more realistic benchmarks, such as the S&P 50
 
 ### Risk Aversion
 
-We have a free parameter risk aversion $$ \gamma $$. which captures the trade-off between expected return and tracking error. We will set $$ \gamma $$ between 0.25 to 1. Setting $$ \gamma $$ to 5 (or a large number is not good, **WHY?**)
+We have a free parameter risk aversion $$ \gamma $$. which captures the trade-off between expected return and tracking error. We will set $$ \gamma $$ between 0.25 to 1. Setting $$ \gamma $$ to 5 (or a large number is not good, **WHY?**).To understand the role of $$ \gamma $$ in our problem, consider the two limit cases.
+
+* $$ \gamma \to 0 $$. In this case, our problem becomes:
+
+$$
+\max_a \quad a'\mu \\
+  a'1  = 0 \\
+   -b \leq a
+$$
+
+Assuming CAPM, this implies that stocks with high beta are overweighed while stocks with low beta stocks are underweighted relative to the benchmark. Thus, the short-sale constraints are active for negative expected returns  When $$ \gamma \to 0$$ , the tracking error essentially disappears in the objective function.
+
+* $$ \gamma \to \infty $$ . 
+
+$$
+\max_a \quad a'\mu - \frac{1}{2} \gamma a'\Sigma a \\
+  a'1  = 0 \\
+   -b \leq a
+$$
+
+The optimal portfolio in this case is: $$ a^* = 0 $$. That is, none of the constraints are binding, and the portfolio manager will mimic the benchmark/index exactly (by holding the market portfolio exactly).
 
 ## Portfolio Construction
 
