@@ -7,7 +7,7 @@
 * [Empirical Results](../chapter-2/README.md)
   * [Data Construction](../chapter-2/dataConstruction.md)
   * [Results](../chapter-2/results.md)
-  * [Thoughts](../chapter-2/thoughts.md)
+  * [Things To Do](../chapter-2/thoughts.md)
 * [Papers](../chapter-3/README.md)
   *  [Paulo's Timing Paper](../chapter-3/paper1.md)
   *  Margin-CAPM (Garleanu and Pedersen)
