@@ -29,3 +29,5 @@ Stocks are categorized into different beta groups (low, medium and high betas).
 
 They compare all-days beta with down-beta.
 
+Stock market-down days are betas calculated from down-days $$ \hat{b}^-_{y-1}$$.
+
