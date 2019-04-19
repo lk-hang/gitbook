@@ -9,11 +9,11 @@ My sample data is the daily data from the whole universe of CRSP, ranging from 1
 
 I obtain $$\lambda_i$$ for each stock in each month by solving the portfolio optimization [see](<https://www.lkhang.com/chapter-1/motivation#problem-formulation>). Note that $$\lambda_i$$ is either $0$ or larger than $0$, by the KKT condition. I repeat the exercise for both CAPM and Fama French. The portfolio optimization is a quadratic programming problem and can be solved with a Goldfarb/Idnani dual algorithm `quadprog`. 
 
-To solve the quadratic programming problem, I require specification of $$\mu, \Sigma, b​$$. I use the following procedure.
+To solve the quadratic programming problem, I require specification of $$\mu, \Sigma, b$$. I use the following procedure.
 
 ### Expected Return
 
-For each stock-month pair, I run the following regression using the daily stock return and the daily factors to obtain the $K \times 1$-vector stock betas $$ \hat{\beta}_i ​$$:
+For each stock-month pair, I run the following regression using the daily stock return and the daily factors to obtain the $K \times 1$-vector stock betas $$ \hat{\beta}_i $$:
 $$
 E[r_i - r_f] = \beta_i'F + \varepsilon_i
 $$
@@ -21,7 +21,7 @@ To obtain the expected return $\mu$, we simply use: $$ \hat{\beta}_i' F$$.
 
 ### Return Covariance
 
-To obtain the return covariance matrix $$\Sigma = B\Sigma_F B' + diag(\sigma_{\varepsilon, 1}^2,..., \sigma_{\varepsilon_{1,N}^2})$$, I calculate covariance matrix of the daily factors of that month, returning, $$\Sigma_{F, t}$$. $$B$$ is the $N \times k$ factor loading matrix, estimated in the linear regression above for each month, and $$\sigma_{\varepsilon_i}^2​$$ is estimated with its corresponding mean-squared error.
+To obtain the return covariance matrix $$\Sigma = B\Sigma_F B' + diag(\sigma_{\varepsilon, 1}^2,..., \sigma_{\varepsilon_{1,N}^2})$$, I calculate covariance matrix of the daily factors of that month, returning, $$\Sigma_{F, t}$$. $$B$$ is the $N \times k$ factor loading matrix, estimated in the linear regression above for each month, and $$\sigma_{\varepsilon_i}^2$$ is estimated with its corresponding mean-squared error.
 
 ### Benchmark Weights
 
@@ -29,8 +29,7 @@ For my first exercise, I use the whole CRSP universe as a benchmark. To do so, I
 
 Subsequent exercises would involve more realistic benchmarks, such as the S&P 500.
 
-- [ ] Paulo mentioned that I can use `/wrds/crsp/sasdata/a_indexes/DSP500LIST` to access S&P 500 listings, which can be merged with CRSP
-- [ ] Paulo mentioned that Thompson-Reuter Mutual Funds data can be found from `/wrds/tfn/sasdata/s12/s12`
+- [x] Paulo mentioned that Thompson-Reuter Mutual Funds data can be found from `/wrds/tfn/sasdata/s12/s12`
 
 ### Risk Aversion
 

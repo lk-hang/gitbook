@@ -4,11 +4,11 @@
 
 ## Empirical  Exercises:
 
-- [ ] Repeat the optimization problem exercise without the benchmark weight.
-- [ ] Robustness check for frequency: repeat the exercise with 3 months instead of 1 month
-- [ ] Use S&P 500 as a benchmark instead of the CRSP.
+- [x] Repeat the optimization problem exercise without the benchmark weight.
+- [x] Robustness check for frequency: repeat the exercise with 3 months instead of 1 month
+- [x] Use S&P 500 as a benchmark instead of the CRSP.
 - [ ] Use Tobit Model or similar censured model to characterize lambda as a function of observables, such as firm characteristics. For example, how do we categorize $$ \lambda = 1$$ stocks and $$ \lambda = 2$$ stocks? What are the firms with high $$ \lambda $$s, and what are the firms with low $$\lambda$$s? Merge CRSP with Compustat. What is the composition of risk: do some stocks tend to have high leverage/book/to/market? Which part could be assigned due to fundamentals, and which part due to non-fundamentals (trading cost/risk etc)?
-- [ ] Double check why Alphas are so big for pre-formation portfolio.
+- [x] Double check why Alphas are so big for pre-formation portfolio.
 - [ ] Post-Formation: Look whether price impact is present on the first few days. 
 
 ## Theoretical Exercises:
