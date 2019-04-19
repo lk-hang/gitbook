@@ -8,12 +8,18 @@ Yaron Levi and Ivo Welch
 
 Their research question:
 
-*are all-days market-beta a good measure for stocks' ability to hedge against bear and crash markets?*
+* are all-days market-beta a good measure for stocks' ability to hedge against bear and crash markets?
 
 
 
+All-days market-beta is defined as beta that is measured on all days, whereas down-beta is only measured on days when the stock market declined. 
 
+They show that : 
+* all-days market-beta is a better measure than down-beta only for predicting down-beta for the next period.
+* the relationship between ex-post down-betas and returns is positive, but the relationship between ex-ante down-betas and returns is negative
+* Ex-ante down-betas or plain-betas did not earn a positive risk premium. The positive alpha found in Ang, Chen and Xing (2006) exist because exposure to market premium is omitted. The alpha turns negative once adjusted for market risk premium.
 
+Overall, their evidence is not consistent with a theory of reward for bearing downward risk.
 
 ## Data Construction
 
