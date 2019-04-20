@@ -33,7 +33,7 @@ Since the empirical mean of $$ R_i - R_f$$ equals 5.13, and the empirical mean o
 
 See figure below: 
 
-![img1](/chapter-2/images/img1.png)
+![img1](../chapter-2/images/img1.png)
 
 
 
