@@ -33,7 +33,9 @@ Subsequent exercises would involve more realistic benchmarks, such as the S&P 50
 
 ### Risk Aversion
 
-We have a free parameter risk aversion $$ \gamma $$. which captures the trade-off between expected return and tracking error. We will set $$ \gamma $$ between 0.25 to 1. Setting $$ \gamma $$ to 5 (or a large number is not good, **WHY?**).To understand the role of $$ \gamma $$ in our problem, consider the two limit cases.
+I have a free parameter risk aversion $$ \gamma $$. which captures the trade-off between expected return and tracking error. We will set $$ \gamma $$ equal to 0.25[^1].
+
+To understand the role of $$ \gamma $$ in our problem, consider the two limit cases.
 
 * $$ \gamma \to 0 $$. In this case, our problem becomes:
 
@@ -53,7 +55,9 @@ $$
    -b \leq a
 $$
 
-The optimal portfolio in this case is: $$ a^* = 0 $$. That is, none of the constraints are binding, and the portfolio manager will mimic the benchmark/index exactly (by holding the market portfolio exactly).
+The optimal portfolio in this case is: $$ a^* = 0 $$. That is, none of the constraints are binding, and the portfolio manager will mimic the benchmark/index exactly (by holding the market portfolio exactly). Empirically, $$ \gamma = 0.25 $$ turns out create fairly equally-sized portfolios. 
+[^1]:  I attempted to set $$ \lambda $$ at other values, including 1 and 5. Setting $$ \gamma $$ to 5 (or a large number is not good) turns out to not work out well, since it turns off the covariance effect, see discussion in text.
+
 
 ## Portfolio Construction
 
