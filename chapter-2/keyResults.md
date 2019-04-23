@@ -8,7 +8,7 @@ Key observations:
 
 * For the first next month in the next quarter, I see a big reversal, with a really big Alpha spread of 1.3 percent on a monthly basis (This is almost 16% on an annual basis!) (-1% for lambda = 0 and 0.3% for lambda = 4). 
 * This alpha spread disappears in month 2 and month 3 of the same quarter. 
-* Including benchmark in the portfolio optimization can erode alpha (see Fama French). If we don't include benchmark, the results are consistent: LONG high lambda and SHORT low lambda leads to positive alpha.
+* Including benchmark in the portfolio optimization can erode alpha (see Fama French). If we don't include benchmark, the results are consistent: LONG high lambda and SHORT low lambda leads to positive alpha. 
 
 ## CAPM as a Riskmodel
 
