@@ -116,6 +116,8 @@ I repeat the same exercises, but using quarter as a horizon instead of a month.
 
 **Pre-formation with no Benchmark**
 
+(Really strange results. Need to do a few analyses here. Why are the betas so low for realized returns???)
+
 | ranks | lm    | #Stocks | Expected Return | Return Vol | Alpha  | MKT   | Idio Vol | R^2   |
 | ----- | ----- | ------- | --------------- | ---------- | ------ | ----- | -------- | ----- |
 | 0     | 0.000 | 1133    | 4.302           | 6.056      | 3.484  | 0.718 | 5.051    | 0.291 |

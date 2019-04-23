@@ -7,7 +7,7 @@ The research idea is around three themes of asset pricing:
 * Price discovery and mispriced stocks
 * Active management
 
-
+Focus of this week: Model development
 
 
 

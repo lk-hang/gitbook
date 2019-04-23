@@ -11,7 +11,7 @@
 - [x] Double check why Alphas are so big for pre-formation portfolio.
 - [ ] Post-Formation: Look whether price impact is present on the first few days. 
 
-## Theoretical Exercises:
+## Theoretical Exercises (Focus of this week):
 
 - [ ] Hypothesis development : do the results invalidate any longstanding hypothesis?
 - [ ] Current result suggests evidence supporting Betting against beta and the failure of CAPM. Can we link the result to down-beta, downside-risk CAPM, for example? (Perhaps a sub-sample analysis will clarify some of these questions)
