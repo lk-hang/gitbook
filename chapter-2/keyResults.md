@@ -1,9 +1,5 @@
 # Key (or New) Results
 
-![1556067316405](C:\Users\lucki\AppData\Roaming\Typora\typora-user-images\1556067316405.png)
-
-
-
 Empirical Exercise: . After forming the portfolio using the last 3 months, I create quintile portfolios based on the lambdas (I am doing the post-formation exercise). 
 
 Post-formation results are reported below. I first report the realized return and realized volatilities for the months. I then report the time-series alpha, either using a CAPM or a 3-factor Fama French model. Month 1 indicated the first month after formation. Month 2 and Month 3 indicate the second and third month after formation (i.e. second and third month in the next quarter).
@@ -65,8 +61,11 @@ Here are the realized returns and realized volatility
 | rank 4 -  rank 0 | **1.26**              | 0.08    | -0.19   |
 
 ![ff3-alpha-bmk](../chapter-2/images/ff3-alpha-bmk.png)
+
 ![ff3-mkt-bmk](../chapter-2/images/ff3-mkt-bmk.png)
+
 ![ff3-smb-bmk](../chapter-2/images/ff3-smb-bmk.png)
+
 ![ff3-hml-bmk](../chapter-2/images/ff3-hml-bmk.png)
 
 
