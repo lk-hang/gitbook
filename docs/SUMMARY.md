@@ -2,6 +2,8 @@
 
 
 * [Research Proposal](../chapter-1/README.md)
+  
+  * [Discussion](../chapter-1/discussion.md)
   * [Motivation](../chapter-1/motivation.md)
   * [Literature](../chapter-1/literature.md)
 * [Empirical Results](../chapter-2/README.md)

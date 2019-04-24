@@ -40,6 +40,15 @@ $$
 $$
 This condition says that stocks with high shadow costs have lower expected return, or high marginal contribution to risk. 
 
+An alternative approach to extracting $$\lambda$$ is to solve the portfolio optimization problem without tracking a benchmark. In this case, the holdings are $$w$$ such that:
+$$
+\begin{align}
+\max_w \quad & w'\mu - \frac{\gamma}{2}w'\Sigma w \\
+	\text{s.t.} \quad & w'1=1 \\
+	\quad & 0 \leq w
+	
+\end{align}
+$$
 
 
 ## Factor Construction
