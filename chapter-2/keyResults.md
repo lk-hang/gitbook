@@ -1,14 +1,25 @@
 # Key (or New) Results
 
+![1556067316405](C:\Users\lucki\AppData\Roaming\Typora\typora-user-images\1556067316405.png)
+
+
+
 Empirical Exercise: . After forming the portfolio using the last 3 months, I create quintile portfolios based on the lambdas (I am doing the post-formation exercise). 
 
-Post-formation results are reported below. I first report the realized return and realized volatilities for the months. I then report the time-series alpha, either using a CAPM or a 3-factor Fama French model . Month 1 indicated the first month after formation. Month 2 and Month 3 indicate the second and third month after formation (i.e. second and third month in the next quarter).
+Post-formation results are reported below. I first report the realized return and realized volatilities for the months. I then report the time-series alpha, either using a CAPM or a 3-factor Fama French model. Month 1 indicated the first month after formation. Month 2 and Month 3 indicate the second and third month after formation (i.e. second and third month in the next quarter).
 
 Key observations:
 
 * For the first next month in the next quarter, I see a big reversal, with a really big Alpha spread of 1.3 percent on a monthly basis (This is almost 16% on an annual basis!) (-1% for lambda = 0 and 0.3% for lambda = 4). 
 * This alpha spread disappears in month 2 and month 3 of the same quarter. 
-* Including benchmark in the portfolio optimization can erode alpha (see Fama French). If we don't include benchmark, the results are consistent: LONG high lambda and SHORT low lambda leads to positive alpha. 
+* Including benchmark in the portfolio optimization can erode alpha (see Fama French section). Results are consistent if we exclude benchmark: LONG high lambda and SHORT low lambda leads to positive alpha. 
+* The loadings of the portfolios on the SMB, HML, MKT are similar both for pre-formation and post-formation, suggesting that cross-section in lambdas are capturing something else not captured by variation of the Fama French loadings.
+
+**Hypothesis**: I predict that lambda captures the (institutional) demand for stocks. On average, all funds are trying to include assets with high alpha in their portfolios. Given data on previous months, funds estimate some sort of factor model (CAPM, Fama French) to find which stocks are likely to have high alpha. These stocks with high alpha are stocks with $$ \lambda = 0$$ (or equivalently, low $$\lambda$$) in my model. If all funds are demanding stocks with low $$\lambda$$, these stocks have high demand shocks, causing them to be overpriced in the next period. Stocks with high $$\lambda$$, on the other hand, have negative demand shocks, causing them to be underpriced next period (i.e. have high alpha next period). My results below are consistent with this hypothesis. My argument is also in line with a shifting demand from negative alpha stocks to positive alpha stocks. If funds don't consider that other funds are doing the same thing, then they believe that there is no individual price effect. However, since other funds are in fact doing the same thing, leading to an aggregate price effect, or coordination failure between funds.
+
+D. also mentioned that this might be related to slow moving capital (need to review literature why?).
+
+
 
 ## CAPM as a Riskmodel
 
@@ -35,6 +46,14 @@ Here are the realized returns and realized volatility
 
 ### Alphas, Including Benchmark
 
+![capm-alpha-bmk](../chapter-2/images/capm-alpha-bmk.png)
+
+![capm-beta-bmk](../chapter-2/images/capm-beta-bmk.png)
+
+
+
+
+
 |                  | CAPM Alpha (With Bmk) |         |         |
 | ---------------- | --------------------- | ------- | ------- |
 | ranks            | month 1               | month 2 | month 3 |
@@ -44,6 +63,19 @@ Here are the realized returns and realized volatility
 | 3                | 0.19                  | 0.22    | 0.08    |
 | 4                | 0.29                  | -0.02   | -0.42   |
 | rank 4 -  rank 0 | **1.26**              | 0.08    | -0.19   |
+
+![ff3-alpha-bmk](../chapter-2/images/ff3-alpha-bmk.png)
+![ff3-mkt-bmk](../chapter-2/images/ff3-mkt-bmk.png)
+![ff3-smb-bmk](../chapter-2/images/ff3-smb-bmk.png)
+![ff3-hml-bmk](../chapter-2/images/ff3-hml-bmk.png)
+
+
+
+
+
+
+
+
 
 |                 | Fama-French Alpha (With Bmk) |         |         |
 | --------------- | ---------------------------- | ------- | ------- |
@@ -125,8 +157,6 @@ Here are the realized returns and realized volatilities of the portfolio when we
 | rank 4 - rank 0 | **0.22**                     | -0.61   | -0.17   |
 
 **Alphas, without Benchmark**
-
-
 
 |                 | CAPM Alpha (wo Benchmark) |         |         |
 | --------------- | ------------------------- | ------- | ------- |
