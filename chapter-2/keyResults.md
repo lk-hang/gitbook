@@ -11,7 +11,7 @@ Key observations:
 * Including benchmark in the portfolio optimization can erode alpha (see Fama French section). Results are consistent if we exclude benchmark: LONG high lambda and SHORT low lambda leads to positive alpha. 
 * The loadings of the portfolios on the SMB, HML, MKT are similar both for pre-formation and post-formation, suggesting that cross-section in lambdas are capturing something else not captured by variation of the Fama French loadings.
 
-**Hypothesis**: I predict that lambda captures the (institutional) demand for stocks. On average, all funds are trying to include assets with high alpha in their portfolios. Given data on previous months, funds estimate some sort of factor model (CAPM, Fama French) to find which stocks are likely to have high alpha. These stocks with high alpha are stocks with $$ \lambda = 0$$ (or equivalently, low $$\lambda$$) in my model. If all funds are demanding stocks with low $$\lambda$$, these stocks have high demand shocks, causing them to be overpriced in the next period. Stocks with high $$\lambda$$, on the other hand, have negative demand shocks, causing them to be underpriced next period (i.e. have high alpha next period). My results below are consistent with this hypothesis. My argument is also in line with a shifting demand from negative alpha stocks to positive alpha stocks. If funds don't consider that other funds are doing the same thing, then they believe that there is no individual price effect. However, since other funds are in fact doing the same thing, leading to an aggregate price effect, or coordination failure between funds.
+**Hypothesis**: I predict that lambda captures the (institutional) demand for stocks. On average, all funds are trying to include assets with high alpha in their portfolios. Given data on previous months, funds estimate some sort of factor model (CAPM, Fama French) to find which stocks are likely to have high alpha. These stocks with high alpha are stocks with $$ \lambda = 0$$ (or equivalently, low $$\lambda$$) in my model. If all funds are demanding stocks with low $$\lambda$$, these stocks have high demand shocks, causing them to be overpriced in the next period. Stocks with high $$\lambda$$, on the other hand, have negative demand shocks, causing them to be underpriced next period (i.e. have high alpha next period). My results below are consistent with this hypothesis. My argument is also in line with a shifting demand from negative alpha stocks to positive alpha stocks. If funds don't consider that other funds are doing the same thing, then they believe that there is no individual price effect. However, since other funds are in fact doing the same thing, we have an aggregate price effect through the $$ \lambda$$ channel, (i.e. there is coordination failure between funds).
 
 D. also mentioned that this might be related to slow moving capital (need to review literature why?).
 
@@ -60,11 +60,19 @@ Here are the realized returns and realized volatility
 | 4                | 0.29                  | -0.02   | -0.42   |
 | rank 4 -  rank 0 | **1.26**              | 0.08    | -0.19   |
 
+Alpha
+
 ![ff3-alpha-bmk](../chapter-2/images/ff3-alpha-bmk.png)
+
+MKT
 
 ![ff3-mkt-bmk](../chapter-2/images/ff3-mkt-bmk.png)
 
+SMB
+
 ![ff3-smb-bmk](../chapter-2/images/ff3-smb-bmk.png)
+
+HML
 
 ![ff3-hml-bmk](../chapter-2/images/ff3-hml-bmk.png)
 
